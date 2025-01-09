@@ -1,0 +1,147 @@
+body {
+
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+  }
+  
+  .emoji {
+    position: relative;
+    width: 150px;
+    animation: dance 1.5s infinite;
+  }
+  
+  .head {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #ffcc4d;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .eye {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border-radius: 50%;
+    top: 45px;
+  }
+  
+  .eye.left {
+    left: 40px;
+  }
+  
+  .eye.right {
+    right: 40px;
+    animation: wink 2s infinite;
+  }
+  
+  .mouth {
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    background: #000;
+    border-radius: 0 0 50px 50px;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .body {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background: #ffcc4d;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+  }
+  
+  .arm {
+    position: absolute;
+    width: 20px;
+    height: 80px;
+    background: #ffcc4d;
+    top: 150px;
+    border-radius: 20px;
+  }
+  
+  .arm.left {
+    left: 0;
+    transform-origin: top;
+    animation: arm-wave 1.5s infinite ease-in-out;
+  }
+  
+  .arm.right {
+    right: 0;
+    transform-origin: top;
+    animation: arm-wave 1.5s infinite ease-in-out reverse;
+  }
+  
+  .leg {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    background: #ffcc4d;
+    top: 230px;
+    border-radius: 20px;
+  }
+  
+  .leg.left {
+    left: 40px;
+    transform-origin: top;
+    animation: leg-dance 1.5s infinite ease-in-out;
+  }
+  
+  .leg.right {
+    right: 40px;
+    transform-origin: top;
+    animation: leg-dance 1.5s infinite ease-in-out reverse;
+  }
+  
+ 
+  @keyframes wink {
+    0%, 90% {
+      height: 20px;
+    }
+    95%, 100% {
+      height: 5px;
+    }
+  }
+  
+ 
+  @keyframes dance {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+ 
+  @keyframes arm-wave {
+    0%, 100% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(-20deg);
+    }
+  }
+  
+
+  @keyframes leg-dance {
+    0%, 100% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+  }
+  
